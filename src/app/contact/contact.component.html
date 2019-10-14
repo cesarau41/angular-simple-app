@@ -1,0 +1,19 @@
+<form [formGroup]="messageForm" (ngSubmit)="onSubmit(messageForm.value)">
+    <div>
+        <label for="name">
+            Name
+        </label>
+        <input id="name" type="text" formControlName="name">
+    </div>
+    
+    <div>
+        <label for="message">
+            Message
+        </label>
+        <textarea id="message" type="text" formControlName="message" cols="40" rows="8"></textarea>
+    </div>
+    
+    <button class="button" type="submit">Send</button>
+</form>
+
+

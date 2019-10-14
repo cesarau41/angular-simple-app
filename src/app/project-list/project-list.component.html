@@ -1,0 +1,8 @@
+<h2>Projects</h2>
+<div *ngFor="let project of projects; index as projectId" style="margin-bottom: 5pt;">
+    <h4 style="display: inline;"><a [title]="project.name + ' details'" [routerLink]="['/projects', projectId]">
+        {{ project.name }}
+      </a>
+    </h4>
+    <span *ngIf="favService.projecIsFavorite(project)" style="display: inline-block;">Saved!</span>
+</div>

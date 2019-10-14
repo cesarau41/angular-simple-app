@@ -1,0 +1,11 @@
+<div class="container">
+    <div *ngIf="project">
+        <h2>{{ project.name }}</h2>
+        <span *ngIf="favService.projecIsFavorite(project)" style="color: yellow;">Saved</span>
+        <button *ngIf="!favService.projecIsFavorite(project)" (click)="markAsFavorite(project)">Mark As Favorite</button>
+        <p>{{ project.description }}</p>
+        <span *ngFor="let tech of project.technologies">
+            <label>{{ tech }}</label>
+        </span>
+    </div>
+</div>
